@@ -1,0 +1,122 @@
+.index-top-form {
+  padding: 166px 0;
+  background: url("https://avatars.mds.yandex.net/i?id=9ba3ddea6ab25bafcb8bba85b65a2860_l-3523167-images-thumbs&n=13");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+
+  &__title {
+    padding: 0 18%;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    color: #000000;
+
+    & > span {
+      color: #973838;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 80px;
+    color: #000000;
+  }
+
+  & form {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: rgba(1, 1, 1, 0.05) 0 0 10px;
+    padding: 30px 60px;
+
+    & > h2 {
+      margin-bottom: 30px;
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 1;
+      text-transform: uppercase;
+
+      & > span {
+        color: #24C8BC;
+      }
+    }
+  }
+
+  &__fields {
+    display: flex;
+    column-gap: 3.8%;
+    margin-bottom: 30px;
+    padding: 0 20px;
+  }
+
+  &__policy {
+    margin-bottom: .5rem;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .index-top-form {
+    &__title {
+      padding: 0 15%;
+    }
+  }
+}
+
+@media screen and (max-width: 938px) {
+  .index-top-form {
+    &__title {
+      padding: 0 12%;
+    }
+  }
+}
+
+@media screen and (max-width: 867px) {
+  .index-top-form {
+    &__title {
+      padding: 0 9%;
+    }
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .index-top-form {
+    &__title {
+      padding: 0;
+    }
+
+    & form {
+      padding: 30px 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 725px) {
+  .index-top-form {
+    &__fields {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: "name phone" "button button";
+      gap: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 666px) {
+  .index-top-form {
+    &__title {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .index-top-form {
+    &__fields {
+      grid-template-columns: 1fr;
+      grid-template-areas: "name name" "phone phone" "button button";
+      padding: 0 5px;
+    }
+  }
+}

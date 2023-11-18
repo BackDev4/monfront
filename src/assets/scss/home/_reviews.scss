@@ -1,0 +1,267 @@
+.reviews {
+  margin-top: 80px;
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 15px;
+    padding: 0 20px;
+
+    &_mb-40 {
+      margin-bottom: 40px;
+    }
+
+    &-right {
+      display: flex;
+      align-items: center;
+      column-gap: 24px;
+      a {
+        max-width: fit-content;
+        height: fit-content;
+        padding: 14px 20px;
+        font-size: 16px;
+        background: #480c0c;
+        color: #FFFFFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        font-weight: 700;
+        line-height: 18px;
+        transition: 0.25s;
+      }
+    }
+
+    & > h2 {
+      font-size: 36px;
+    }
+  }
+
+  &__carousel {
+    &_mt-40 {
+      margin-top: 40px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 35px;
+    padding: 50px 60px 60px;
+    max-width: 96.5%;
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 12px;
+  }
+
+  &__up {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    padding-right: 40px;
+  }
+
+  &__description {
+    max-width: 53.75%;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 130%;
+    text-align: center;
+    color: #4B535A;
+    position: relative;
+  }
+
+  &__quotes {
+    opacity: .1;
+
+    &_down {
+      position: absolute;
+      bottom: -43px;
+      left: -47px;
+    }
+
+    &_up {
+      position: absolute;
+      top: -51px;
+      right: -47px;
+    }
+  }
+
+  &__down {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 25px;
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #011226;
+  }
+
+  &__job-title {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: #4B535A;
+    text-align: start;
+
+    &_mt-2 {
+      margin-top: 2px;
+    }
+  }
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 180px;
+  background: #7e0719;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+
+  &.bg-white {
+    background: #FFFFFF;
+  }
+
+  &:before {
+    content: '';
+    width: 115px;
+    height: 115px;
+    background: #7e0719;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    position: absolute;
+    top: -11px;
+    left: -16px;
+  }
+
+  & > img {
+    width: 158px;
+    height: 158px;
+    border: 8px solid #FFFFFF;
+    border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+  }
+}
+
+
+::v-deep {
+  /////////////////////CAROUSEL/////////////////////
+  & .carousel {
+    &__slide {
+      &--active {
+        & .reviews {
+          &__item {
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+          }
+        }
+      }
+    }
+
+    &__viewport {
+      padding-bottom: 30px;
+    }
+
+    &__pagination {
+      margin: 10px 0 0;
+    }
+  }
+  .carousel__pagination-button--active::after{
+    width: 18px !important;
+    background: #7e0719;
+  }
+  .carousel__pagination-button::after {
+    border-radius: 20px !important;
+    width: 10px;
+    height: 10px;
+    transition: 0.25s;
+  }
+}
+
+@media screen and (max-width: 996px) {
+  .reviews.little {
+    & .reviews {
+      &__up {
+        justify-content: center;
+        padding-right: 0;
+      }
+
+      &__description {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1070px) {
+  ::v-deep {
+    & .carousel {
+      &__pagination {
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .reviews {
+    &__item {
+      row-gap: 25px;
+    }
+
+    &__up {
+      flex-direction: column;
+      padding-right: 0;
+    }
+
+    &__description {
+      max-width: 90%;
+    }
+
+    &__down {
+      justify-content: center;
+    }
+
+    &__job-title {
+      text-align: unset;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .reviews {
+    &__item {
+      padding: 40px 40px 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 419px) {
+  .reviews {
+    &__title {
+      &-right {
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
+
+    &__item {
+      padding: 50px 54px 60px 54px;
+    }
+  }
+}

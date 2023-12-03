@@ -2,10 +2,12 @@
 import IndexBlock from "@/components/views/home/IndexBlock.vue";
 import Reviews from "@/components/views/home/Reviews.vue"
 import Services from "@/components/views/home/Services.vue";
+import Gallery from "@/components/views/home/Gallery.vue";
 
 export default {
   name: "HomePage",
   components: {
+    Gallery,
     Services,
     IndexBlock,
     Reviews,
@@ -30,6 +32,7 @@ export default {
 
 <template>
   <IndexBlock/>
+  <Gallery/>
   <Services/>
   <Reviews/>
 </template>

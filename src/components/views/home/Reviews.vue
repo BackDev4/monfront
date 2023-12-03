@@ -2,16 +2,27 @@
 import 'vue3-carousel/dist/carousel.css'
 import {Carousel, Slide, Pagination, Navigation} from 'vue3-carousel'
 import {getReviews} from "@/api";
+import ReviewModal from "@/components/views/home/ReviewModal.vue";
 
 export default {
   components: {
+    ReviewModal,
     Carousel,
     Slide,
     Pagination,
     Navigation,
   },
+  methods: {
+    openModal() {
+      this.isModalVisible = true;
+    },
+    closeModal() {
+      this.isModalVisible = false;
+    },
+  },
   data() {
     return {
+      isModalVisible: false,
       reviews: [],
     }
   },
@@ -55,9 +66,13 @@ export default {
       <div class="reviews__title reviews__title_mb-42">
         <h1>Отзывы</h1>
         <div class="reviews__title-right">
-          <a href="#">Добавить отзыв</a>
+          <a @click="openModal">Добавить отзыв</a>
         </div>
       </div>
+    </div>
+    <div>
+      <review-modal :show="isModalVisible" @close="closeModal">
+      </review-modal>
     </div>
 
     <Carousel class="reviews__carousel reviews__carousel_mt-40" ref="carousel" :items-to-show="getCountSlides">
@@ -105,5 +120,4 @@ export default {
 
 <style scoped lang="scss">
 @import "@/assets/scss/home/reviews";
-
 </style>

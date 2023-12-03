@@ -32,8 +32,8 @@ export async function getGallery() {
 
 //////////////// POST //////////////////////
 
-export async function postReviews(form) {
-    return await postAsync('/reviews', form)
+export async function postReviews(formData) {
+    return await postAsync('/reviews', formData)
 }
 
 

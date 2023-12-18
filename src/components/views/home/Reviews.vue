@@ -81,7 +81,7 @@ export default {
       </review-modal>
     </div>
 
-    <Carousel class="reviews__carousel reviews__carousel_mt-40" ref="carousel" :items-to-show="getCountSlides">
+    <Carousel class="reviews__carousel reviews__carousel_mt-40" ref="carousel" :autoplay="3000" :transition="500" :items-to-show="getCountSlides" :wrap-around="true">
       <Slide v-for="review in reviews" :key="review.id">
         <div class="reviews__item">
           <div class="reviews__up">
@@ -125,5 +125,5 @@ export default {
 
 
 <style scoped lang="scss">
-@import "@/assets/scss/home/reviews";
+@import "@/assets/scss/home/_reviews";
 </style>

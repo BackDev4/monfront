@@ -3,6 +3,7 @@ import 'vue3-carousel/dist/carousel.css';
 import {Carousel, Slide, Pagination} from 'vue3-carousel';
 import {getGallery} from "@/api";
 
+
 export default {
   name: "Gallery",
   components: {
@@ -61,10 +62,10 @@ export default {
   <div class="our-certificates">
     <h2 class="our-certificates__title" v-if="title">{{ title }}</h2>
     <div class="our-certificates__content our-certificates__content_mt-50" v-if="gallery?.length">
-      <Carousel class="our-certificates__carousel" :items-to-show="getCountSlides" :autoplay="3000" :transition="500">
+      <Carousel class="our-certificates__carousel" ref="carousel" :items-to-show="getCountSlides" :autoplay="3000" :transition="500" :wrap-around="true">
         <Slide v-for="item in gallery" :key="item.id">
           <div class="our-certificates__item">
-            <img alt="certificate" :src="item.image">
+            <img alt="certificate" :src="item.image"> 
           </div>
         </Slide>
         <template #addons>

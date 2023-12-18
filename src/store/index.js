@@ -1,9 +1,16 @@
 import {createStore} from 'vuex'
 
 export default createStore({
-    state: {},
+    state: {
+        refName: '',
+    },
     getters: {},
-    mutations: {},
+    mutations: {
+        SET_REF_NAME(state, refName) {
+            console.log('mutation', refName)
+            state.refName = refName
+        }
+    },
     actions: {},
     modules: {}
 })

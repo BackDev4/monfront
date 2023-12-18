@@ -11,7 +11,7 @@ export default {
         Установка памятников и сопутствующие услуги в
         <span>Минске</span>
       </h1>
-      <h2 class="index-top-form__subtitle">Установка памятников от опытных сотрудников</h2>
+      <h2 class="index-top-form__subtitle">От опытных сотрудников</h2>
     </div>
   </section>
 

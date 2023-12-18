@@ -19,11 +19,17 @@ export default {
     closeModal() {
       this.isModalVisible = false;
     },
+    handleScrollToReviews() {
+      if (this.$refs.reviewsBlock) {
+        this.$refs.reviewsBlock.scrollIntoView({behavior: 'smooth'});
+      }
+    },
   },
   data() {
     return {
       isModalVisible: false,
       reviews: [],
+      reviewsBlock: null,
     }
   },
   computed: {
@@ -52,9 +58,9 @@ export default {
 
           return 1.85
       }
-    }
+    },
   },
-  mounted() {
+ mounted() {
     getReviews().then(response => this.reviews = response.data)
   }
 }

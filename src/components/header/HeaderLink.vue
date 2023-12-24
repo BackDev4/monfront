@@ -1,5 +1,4 @@
 <script>
-import router from '@/router';
 import { mapMutations } from 'vuex';
 
 export default {
@@ -17,19 +16,16 @@ export default {
 
 <template>
   <div class="header-link">
-    <span class="header-link__title" @click="$router.push('/')">Главная</span>
+    <span class="header-link__title" @click="scrollTo('gallery')">Примеры работ</span>
   </div>
   <div class="header-link">
     <span class="header-link__title" @click="scrollTo('services')">Услуги</span>
   </div>
   <div class="header-link">
-    <span class="header-link__title" @click="scrollTo('gallery')">Примеры работ</span>
+    <span class="header-link__title" @click="scrollTo('reviews')">Отзывы</span>
   </div>
   <div class="header-link">
     <span class="header-link__title" @click="scrollTo('contacts')">Контакты</span>
-  </div>
-  <div class="header-link">
-    <span class="header-link__title" @click="scrollTo('reviews')">Отзывы</span>
   </div>
 </template>
 

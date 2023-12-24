@@ -5,8 +5,8 @@ import mainLayoutRoutes from "@/router/mainLayout";
 const routes = [
     {
         path: '/',
-        name: 'home',
         component: MainLayout,
+
         children: [...mainLayoutRoutes]
     },
 ]

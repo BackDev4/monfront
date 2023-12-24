@@ -1,4 +1,6 @@
-import {createStore} from 'vuex'
+import { createStore } from 'vuex'
+import contacts from "@/store/modules/contacts";
+import reviews from "@/store/modules/reviews";
 
 export default createStore({
     state: {
@@ -12,5 +14,8 @@ export default createStore({
         }
     },
     actions: {},
-    modules: {}
+    modules: {
+        contacts,
+        reviews,
+    }
 })

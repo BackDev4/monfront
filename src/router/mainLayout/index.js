@@ -1,13 +1,13 @@
 import HomePage from "@/views/HomePage.vue";
-import Services from "@/components/views/home/Services.vue";
+import Reviews from "@/views/Reviews.vue";
 
 export default [
     {
-        path: '',
+        path: '/',
         component: HomePage,
     },
     {
-      path: '/services',
-      component: Services,
-    },
+      path: 'reviews',
+      component: Reviews,
+    }
 ]

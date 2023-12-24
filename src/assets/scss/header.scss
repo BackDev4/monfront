@@ -10,7 +10,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 0;
+    padding: 12px 12px;
     border-bottom: 1px solid #DFDFDF;
   }
 
@@ -19,6 +19,8 @@
     align-items: center;
     column-gap: 20px;
     cursor: pointer;
+    width: 48px;
+    height: 48px;
   }
 
   &__info {
@@ -29,18 +31,19 @@
 
   &__networks {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
   }
 
   &__phone-number {
     font-weight: 700;
     font-size: 18px;
-    color: #24c8bc;
+    color: #580619;
     transition: .25s;
+    cursor: auto;
 
     &:hover {
-      color: #3bbbb1;
+      color: #580619;
       transition: .25s;
     }
   }

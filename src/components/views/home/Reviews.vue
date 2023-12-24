@@ -73,6 +73,7 @@ export default {
         <h1>Отзывы</h1>
         <div class="reviews__title-right">
           <a @click="openModal">Добавить отзыв</a>
+          <router-link to="/reviews">Больше отзывов</router-link>
         </div>
       </div>
     </div>

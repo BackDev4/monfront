@@ -1,15 +1,18 @@
 <template>
-  <router-view/>
+  <router-view />
 </template>
 
 <script>
-import {mapActions} from "vuex";
+import { mapActions } from "vuex";
 
 export default {
   name: "App",
   methods: {},
   watch: {
-    beforeMount() {
+    '$route.path'() {
+      window.scrollTo({
+        top: 0,
+      });
     }
   }
 }
@@ -20,7 +23,9 @@ export default {
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700;800&display=swap');
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;

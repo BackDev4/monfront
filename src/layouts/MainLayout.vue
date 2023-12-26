@@ -8,7 +8,7 @@ export default defineComponent({
   components: {Footer, Header},
   data() {
     return {
-      height: 40,
+      height: 100,
     }
   },
   methods: {

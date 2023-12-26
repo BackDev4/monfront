@@ -28,7 +28,7 @@ export default {
           <img src="../../assets/images/pngwing.com.png" @click="$router.push('/')" />
 
           <div class="header__info">
-            <span class="header__phone-number">{{getFirstPhone() }}</span>
+            <span class="header__phone-number">{{ getFirstPhone() }}</span>
             <div class="header__networks">
               <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 512 512">
                 <path

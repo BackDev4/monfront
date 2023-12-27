@@ -114,6 +114,7 @@ export default {
 }
 
 .reviews-page {
+    padding: 20px;
     &__title {
         &_mb-20 {
             margin-bottom: 20px;

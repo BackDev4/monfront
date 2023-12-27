@@ -4,7 +4,7 @@ import Reviews from "@/components/views/home/Reviews.vue"
 import Services from "@/components/views/home/Services.vue";
 import Gallery from "@/components/views/home/Gallery.vue";
 import Contacts from "@/components/views/home/Contacts.vue";
-import { mapState } from "vuex";
+import { mapState, mapActions } from "vuex";
 
 export default {
   name: "HomePage",
@@ -33,7 +33,6 @@ export default {
       const element = document.querySelector(`#${this.refName}`);
       console.log('element', element)
       element.scrollIntoView({ block: 'center', behavior: 'smooth' })
-
     }
   },
   created() {
@@ -45,13 +44,11 @@ export default {
 </script>
 
 <template>
-  <IndexBlock/>
-  <Gallery id="gallery"/>
-  <Services id="services"/>
-  <Reviews id="reviews"/>
-  <Contacts id="contacts"/>
+  <IndexBlock />
+  <Gallery id="gallery" />
+  <Services id="services" />
+  <Reviews id="reviews" />
+  <Contacts id="contacts" />
 </template>
 
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>

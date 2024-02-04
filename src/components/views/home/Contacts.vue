@@ -153,6 +153,7 @@ export default {
 
 <style scoped lang="scss">
 .contacts-info {
+  padding: 0 20px;
   &__content {
     display: grid;
     // grid-template-columns: repeat(2, 1fr);

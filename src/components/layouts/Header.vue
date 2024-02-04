@@ -60,20 +60,20 @@ export default {
         </div>
         <div class="header__right">
         </div>
-        <IconButton class="header__burger-icon" bg="white" @click="showBurgerMenu = true">
+        <button class="header__burger-icon" bg="white" @click="showBurgerMenu = true">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="11" viewBox="0 0 16 11" fill="none">
             <path
               d="M0.511719 10.9769H15.5807V9.30262H0.511719V10.9769ZM0.511719 6.79112H15.5807V5.11679H0.511719V6.79112ZM0.511719 0.930969V2.6053H15.5807V0.930969H0.511719Z"
               fill="#FFA765"></path>
           </svg>
-        </IconButton>
+        </button>
       </div>
       <nav class="header__nav">
         <HeaderLink></HeaderLink>
       </nav>
     </div>
   </header>
-  <BurgerMenu :opened="showBurgerMenu" :header-links="headerLinks" @click="showBurgerMenu = false"
+  <BurgerMenu :opened="showBurgerMenu"  @click="showBurgerMenu = false"
     v-show="showBurgerMenu" />
 </template>
 

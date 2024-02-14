@@ -23,5 +23,6 @@ COPY --from=build /app/dist /usr/share/nginx/html
 # Открываем порт 80 для веб-сервера Nginx
 EXPOSE 80
 
-# Запускаем Nginx в режиме daemon off
-CMD ["nginx", "-g", "daemon off;"]
+WORKDIR /app
+COPY . /app
+CMD sh /app/startup.sh

@@ -1,16 +1,27 @@
+# Используем официальный образ Node.js
 FROM node:14 AS build
 
+# Устанавливаем рабочую директорию
 WORKDIR /app
+
+# Копируем файлы package.json и package-lock.json и устанавливаем зависимости
 COPY package*.json ./
 RUN npm install
+
+# Копируем все остальные файлы приложения
 COPY . .
+
+# Собираем проект Vue.js
 RUN npm run build
 
+# Используем легковесный образ HTTP-сервера для статических файлов
 FROM nginx:alpine
 
+# Копируем собранные файлы приложения в директорию Nginx
 COPY --from=build /app/dist /usr/share/nginx/html
-COPY startup.sh /usr/share/nginx/html/startup.sh
 
-EXPOSE 8000
+# Открываем порт 80 для веб-сервера Nginx
+EXPOSE 80
 
-CMD sh /usr/share/nginx/html/startup.sh
+# Запускаем Nginx в режиме daemon off
+CMD ["nginx", "-g", "daemon off;"]

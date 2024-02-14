@@ -12,6 +12,5 @@ FROM nginx:alpine
 COPY --from=0 /app/dist /usr/share/nginx/html
 COPY startup.sh /app/startup.sh
 
-EXPOSE 80
 
 CMD sh /app/startup.sh

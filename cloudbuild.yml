@@ -1,0 +1,12 @@
+steps:
+  # Установка зависимостей
+  - name: 'gcr.io/cloud-builders/npm'
+    args: ['install']
+
+  # Сборка приложения
+  - name: 'gcr.io/cloud-builders/npm'
+    args: ['run', 'build']
+
+  # Создание Docker-образа
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/my-vue-app', '.']

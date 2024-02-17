@@ -19,7 +19,7 @@ export default {
   methods: {
     ...mapActions('contacts', ['getContacts']),
     getFirstPhone() {
-      return this.contacts.find(contact => contact.type === 'phone').data;
+      return this.contacts?.find(contact => contact.type === 'phone')?.data;
     },
   },
   computed: {

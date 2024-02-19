@@ -20,7 +20,6 @@ export default {
     <div class="our-services__container">
       <div class="our-services__title-div">
         <h2 class="our-services__title">Наши услуги</h2>
-        <a href="#">Больше услуг</a>
       </div>
       <div class="our-services__content our-services__content_mt-42">
         <a class="router-link-active router-link-exact-active our-services__service" v-for="item in services"

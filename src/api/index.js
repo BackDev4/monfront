@@ -18,8 +18,8 @@ export async function getContacts() {
     return await getAsync(`/contact`);
 }
 
-export async function getServices() {
-    return await getAsync(`/services`);
+export async function getServices(page) {
+    return await getAsync(`/services?page=${page}`);
 }
 
 export async function getReviews() {

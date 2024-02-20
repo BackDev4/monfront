@@ -15,14 +15,14 @@
 
             <div class="burger-menu__down">
                 <nav class="burger-menu__nav">
-                    <HeaderLink/>
+                    <HeaderLink />
                 </nav>
             </div>
         </div>
         <div>
         </div>
 
-        <a href="tel:8-800-500-75-94" class="burger-menu__phone-number">8-800-500-75-94</a>
+        <a href="tel:{{ getFirstPhone() }}" class="burger-menu__phone-number">{{ getFirstPhone() }}</a>
     </div>
 </template>
   
@@ -40,6 +40,10 @@ export default {
         headerLinks: {
             type: Array,
             default: []
+        },
+        getFirstPhone: {
+            type: Function,
+            required: true
         }
     },
 }

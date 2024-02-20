@@ -74,7 +74,7 @@ export default {
     </div>
   </header>
   <BurgerMenu :opened="showBurgerMenu"  @click="showBurgerMenu = false"
-    v-show="showBurgerMenu" />
+    v-show="showBurgerMenu" :getFirstPhone="getFirstPhone"/>
 </template>
 
 <style scoped lang="scss">

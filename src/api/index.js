@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const BASE_URL = 'https://backend-lz3k6r3mia-uc.a.run.app/api'
+const BASE_URL = 'http://34.69.53.42/api'
 
 //////////////// GET //////////////////////
 
